@@ -1,1 +1,55 @@
-/* Add styles here */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+:root {
+    --primary-color: #0056b3;
+    --primary-color-dark: #003d82;
+    --background-color: #f0f2f5;
+    --text-color: #333;
+    --white-color: #fff;
+    --card-shadow: 0 10px 20px rgba(0,0,0,0.1), 0 6px 6px rgba(0,0,0,0.15);
+    --button-glow: 0 0 15px rgba(0, 86, 179, 0.7);
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M5 0h1L0 6V5zM6 5v1H5z"/%3E%3C/g%3E%3C/svg%3E');
+}
+
+header {
+    background-color: var(--white-color);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    box-shadow: var(--card-shadow);
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+}
+
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+cover-letter-analyzer {
+    width: 100%;
+    max-width: 800px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: #777;
+}
