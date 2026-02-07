@@ -233,6 +233,20 @@ h1 {
   padding: 60px 0;
 }
 
+.disclosure {
+  padding: 24px 0 0;
+}
+
+.disclosure-line {
+  font-weight: 700;
+  color: var(--accent-2);
+}
+
+.disclosure-desc {
+  color: var(--muted);
+  margin-top: 6px;
+}
+
 .section-header {
   margin-bottom: 24px;
 }
