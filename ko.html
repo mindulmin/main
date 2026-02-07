@@ -34,7 +34,6 @@
         <a href="#quiz" data-i18n="navQuiz">퀴즈</a>
         <a href="#tips" data-i18n="navTips">학습 팁</a>
         <a href="#correction" data-i18n="navCorrection">교정</a>
-        <a href="#data" data-i18n="navData">데이터</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="language">
         <button type="button" class="pill is-active" data-lang="ko">KO</button>
@@ -59,6 +58,26 @@
           <div class="hero-actions">
             <a class="btn primary" href="#quiz" data-i18n="heroCta">지금 퀴즈 시작</a>
             <a class="btn ghost" href="#tips" data-i18n="heroCtaAlt">학습 팁 보기</a>
+          </div>
+          <div class="hero-priority">
+            <div class="hero-priority-header">
+              <h2>유저가 먼저 원하는 것</h2>
+              <p>복잡한 가입이나 설정 없이 바로 쓰고, 짧게 피드백 받고, 다시 시도할 수 있게 설계합니다.</p>
+            </div>
+            <div class="hero-priority-grid">
+              <div class="hero-priority-card">
+                <h3>즉시 시작</h3>
+                <p>로그인 없이 퀴즈/교정을 바로 사용하고, 원하는 언어만 선택하면 됩니다.</p>
+              </div>
+              <div class="hero-priority-card">
+                <h3>실전 중심</h3>
+                <p>업무/면접/메신저 같은 실제 상황 문장을 기준으로 개선합니다.</p>
+              </div>
+              <div class="hero-priority-card">
+                <h3>짧은 피드백</h3>
+                <p>정답 여부만이 아니라 규칙 1줄 + 예문으로 빠르게 이해합니다.</p>
+              </div>
+            </div>
           </div>
           <div class="hero-stats">
             <div>
@@ -85,6 +104,20 @@
             <div class="phrase" id="weeklyPhrase"></div>
             <button class="btn small" id="copyPhrase" type="button" data-i18n="copyButton">표현 복사</button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-korean">
+      <div class="container">
+        <div class="section-header">
+          <h2>왜 “한국어를 공부하는 외국인”이 포함되나요?</h2>
+          <p>영어 학습자만이 아니라, 한국어 학습 수요도 빠르게 커지고 있어 두 집단을 모두 고려합니다.</p>
+        </div>
+        <div class="why-list">
+          <div class="why-item">K-콘텐츠 확산으로 한국어 학습자가 꾸준히 증가</div>
+          <div class="why-item">한국어는 띄어쓰기·조사·활용에서 실전 교정 니즈가 큼</div>
+          <div class="why-item">한 화면에서 영어/한국어 학습 흐름을 제공하면 재방문 동기가 높음</div>
         </div>
       </div>
     </section>
@@ -194,69 +227,67 @@
       </div>
     </section>
 
-    <section class="section" id="data">
-      <div class="container">
-        <div class="section-header">
-          <h2 data-i18n="dataTitle">콘텐츠 데이터</h2>
-          <p data-i18n="dataDesc">JSON 기반으로 퀴즈/팁 데이터를 관리합니다.</p>
-        </div>
-        <div class="data-grid">
-          <div class="data-card">
-            <div class="data-header">
-              <h3 data-i18n="dataQuiz">퀴즈 JSON</h3>
-              <div class="data-actions">
-                <button class="btn ghost small" id="copyQuiz" type="button" data-i18n="dataCopy">복사</button>
-                <button class="btn primary small" id="applyQuiz" type="button" data-i18n="dataApply">적용</button>
-              </div>
-            </div>
-            <textarea id="quizJson" rows="10"></textarea>
-          </div>
-          <div class="data-card">
-            <div class="data-header">
-              <h3 data-i18n="dataTips">팁 JSON</h3>
-              <div class="data-actions">
-                <button class="btn ghost small" id="copyTips" type="button" data-i18n="dataCopy">복사</button>
-                <button class="btn primary small" id="applyTips" type="button" data-i18n="dataApply">적용</button>
-              </div>
-            </div>
-            <textarea id="tipsJson" rows="10"></textarea>
-          </div>
-        </div>
-        <p class="data-hint">로컬에서 JSON 파일을 편집해도 되고, 여기에서 수정 후 복사해 파일에 붙여넣어도 됩니다.</p>
-      </div>
-    </section>
-
     <section class="section" id="positioning">
       <div class="container">
         <div class="section-header">
-          <h2>유저 니즈 기반 포지션</h2>
-          <p>“영어↔한국어 실전 문장 교정 + 60초 퀴즈 + 내 실수 패턴 분석”</p>
+          <h2>시장 빈틈 공략 10가지</h2>
+          <p>미충족 수요를 근거와 함께 정리하고, 웹사이트에 반영하는 방식까지 연결했습니다.</p>
         </div>
         <div class="gap-grid">
-          <div class="gap-card">
-            <h3>미충족 수요</h3>
-            <ul>
-              <li>광고/유료벽으로 학습 흐름이 끊김</li>
-              <li>왜 틀렸는지 설명 부족</li>
-              <li>한국어 띄어쓰기/조사 교정 니즈</li>
-            </ul>
-          </div>
-          <div class="gap-card">
-            <h3>공략 포지션</h3>
-            <ul>
-              <li>로그인 없이 즉시 학습</li>
-              <li>교정 + 규칙 + 예문</li>
-              <li>업무/커리어 문장 교정</li>
-            </ul>
-          </div>
-          <div class="gap-card">
-            <h3>콘텐츠/기능 설계</h3>
-            <ul>
-              <li>1분 퀴즈 + 오답노트</li>
-              <li>K-콘텐츠 대사 기반 학습</li>
-              <li>개인 오류 태그 저장(추후)</li>
-            </ul>
-          </div>
+          <article class="gap-card">
+            <h3>1) 무료 학습 흐름이 끊기지 않는 경험</h3>
+            <p class="gap-evidence">광고/하트/에너지로 학습이 중단된다는 불만이 반복됨.</p>
+            <p class="gap-approach">“1분 퀴즈/1문장 교정”은 로그인 없이 즉시 사용 + 광고는 본문 중간 1~2개로 최소화</p>
+          </article>
+          <article class="gap-card">
+            <h3>2) ‘왜 틀렸는지’ 설명 + 재발 방지</h3>
+            <p class="gap-evidence">앱이 정답 중심/피드백 얕다는 불만 존재.</p>
+            <p class="gap-approach">교정 결과에 규칙 1줄 + 예문 2개 + 미니퀴즈 1개 자동 생성</p>
+          </article>
+          <article class="gap-card">
+            <h3>3) 개인 오류 아카이브(나만의 오답노트)</h3>
+            <p class="gap-evidence">유저는 “내가 반복하는 실수”를 추적하고 싶어함.</p>
+            <p class="gap-approach">교정/퀴즈 결과를 오류 태그(조사/시제/어순)로 저장, 다음 퀴즈에 반영</p>
+          </article>
+          <article class="gap-card">
+            <h3>4) 한국어 띄어쓰기/조사 교정에 특화</h3>
+            <p class="gap-evidence">한국어는 띄어쓰기·조사·활용이 구조적으로 어렵고 교정 수요 큼.</p>
+            <p class="gap-approach">“Korean Writing Fix” 도구 + “왜 이 띄어쓰기가 맞는지” 초간단 설명</p>
+          </article>
+          <article class="gap-card">
+            <h3>5) 발음 교정의 ‘구체적 처방’</h3>
+            <p class="gap-evidence">AI 회화 앱이 발음 피드백이 기초적/관대하다는 지적.</p>
+            <p class="gap-approach">발음 진단 → 입모양/혀 위치 → 최소대립쌍 퀴즈 한 세트 제공</p>
+          </article>
+          <article class="gap-card">
+            <h3>6) K-드라마/가사 기반 학습 도구</h3>
+            <p class="gap-evidence">학습 동기는 강하지만 도구가 파편적.</p>
+            <p class="gap-approach">“대사 1줄 → 표현 설명 → 비슷한 표현 3개 → 쉐도잉” 템플릿</p>
+          </article>
+          <article class="gap-card">
+            <h3>7) 업무/커리어 상황별 영어 교정</h3>
+            <p class="gap-evidence">AI 번역 시대에도 업무 커뮤니케이션은 중요하다는 논지.</p>
+            <p class="gap-approach">이메일/면접/회의/메신저별 템플릿 + 톤/격식 레벨 교정</p>
+          </article>
+          <article class="gap-card">
+            <h3>8) 다국어 UI + 다국어 학습언어 조합 확장</h3>
+            <p class="gap-evidence">다국어 접근성이 학습자 증가에 영향을 준 흐름이 있음.</p>
+            <p class="gap-approach">영어↔한국어뿐 아니라 “스페인어 UI로 한국어 배우기”처럼 조합 확장</p>
+          </article>
+          <article class="gap-card">
+            <h3>9) 짧고 반복 가능한 ‘마이크로’ 학습</h3>
+            <p class="gap-evidence">모바일 습관에 맞는 짧은 학습이 계속 강화되는 흐름.</p>
+            <p class="gap-approach">“오늘의 60초 퀴즈” + “누적 스트릭”을 웹에서 구현</p>
+          </article>
+          <article class="gap-card">
+            <h3>10) 광고 수익형(애드센스) SEO 최적 도구형 페이지</h3>
+            <p class="gap-evidence">교육/온라인 학습이 니치로 자주 언급됨.</p>
+            <p class="gap-approach">블로그 + 도구 페이지 조합(퀴즈/교정/템플릿)으로 페이지뷰·체류시간 강화</p>
+          </article>
+        </div>
+        <div class="positioning-note">
+          <strong>반영 요약</strong>
+          <p>상단에는 즉시 사용 가능한 퀴즈/교정을 배치하고, 하단에는 업무·K-콘텐츠·발음 등 테마별 도구 페이지를 확장하는 구조로 설계합니다.</p>
         </div>
       </div>
     </section>

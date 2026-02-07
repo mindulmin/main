@@ -14,7 +14,6 @@ const fallbackData = {
       navQuiz: "퀴즈",
       navTips: "학습 팁",
       navCorrection: "교정",
-      navData: "데이터",
       heroEyebrow: "듀오링고 + 스픽 감성의 웹형 MVP",
       heroTitle: "하루 10분, 단어와 표현을 정확하게.",
       heroDesc: "한국인 영어 학습자와 한국어 학습자를 동시에 겨냥한 퀴즈, 블로그, 교정 흐름을 한 화면에서 제공합니다.",
@@ -23,6 +22,14 @@ const fallbackData = {
       statLanguages: "학습 언어",
       statModules: "핵심 모듈",
       statStage: "현재 단계",
+      prioritiesTitle: "유저가 먼저 원하는 것",
+      prioritiesDesc: "복잡한 가입이나 설정 없이 바로 쓰고, 짧게 피드백 받고, 다시 시도할 수 있게 설계합니다.",
+      priority1Title: "즉시 시작",
+      priority1Desc: "로그인 없이 퀴즈/교정을 바로 사용하고, 원하는 언어만 선택하면 됩니다.",
+      priority2Title: "짧은 피드백",
+      priority2Desc: "정답 여부만이 아니라 규칙 1줄 + 예문으로 빠르게 이해합니다.",
+      priority3Title: "실전 중심",
+      priority3Desc: "업무/면접/메신저 같은 실제 상황 문장을 기준으로 개선합니다.",
       panelTitle: "오늘의 미션",
       panelTitle2: "이번주 인기 표현",
       copyButton: "표현 복사",
@@ -44,12 +51,11 @@ const fallbackData = {
       correctionLang: "교정 언어",
       correctionRun: "교정 실행",
       correctionReset: "초기화",
-      dataTitle: "콘텐츠 데이터",
-      dataDesc: "JSON 기반으로 퀴즈/팁 데이터를 관리합니다.",
-      dataQuiz: "퀴즈 JSON",
-      dataTips: "팁 JSON",
-      dataApply: "적용",
-      dataCopy: "복사",
+      whyKoreanTitle: "왜 “한국어를 공부하는 외국인”이 포함되나요?",
+      whyKoreanDesc: "영어 학습자만이 아니라, 한국어 학습 수요도 빠르게 커지고 있어 두 집단을 모두 고려합니다.",
+      whyKoreanPoint1: "K-콘텐츠 확산으로 한국어 학습자가 꾸준히 증가",
+      whyKoreanPoint2: "한국어는 띄어쓰기·조사·활용에서 실전 교정 니즈가 큼",
+      whyKoreanPoint3: "한 화면에서 영어/한국어 학습 흐름을 제공하면 재방문 동기가 높음",
       footerText: "MVP 데모: 퀴즈 · 팁 · 교정 흐름을 한 번에 검증합니다.",
       placeholderSearch: "검색",
       placeholderCorrection: "문장을 입력하세요"
@@ -59,7 +65,6 @@ const fallbackData = {
       navQuiz: "Quiz",
       navTips: "Tips",
       navCorrection: "Correction",
-      navData: "Data",
       heroEyebrow: "Web MVP inspired by Duolingo + Speak",
       heroTitle: "Ten minutes a day, sharpen words and expressions.",
       heroDesc: "A single flow that serves Korean learners of English and global learners of Korean: quiz, tips, and correction.",
@@ -68,6 +73,14 @@ const fallbackData = {
       statLanguages: "Languages",
       statModules: "Core modules",
       statStage: "Stage",
+      prioritiesTitle: "User-First Priorities",
+      prioritiesDesc: "Use it instantly, get short feedback, and try again without friction.",
+      priority1Title: "Instant start",
+      priority1Desc: "Run quizzes/corrections without login. Just pick a language.",
+      priority2Title: "Short feedback",
+      priority2Desc: "Not just right/wrong—learn with a 1-line rule + example.",
+      priority3Title: "Real-world focus",
+      priority3Desc: "Improve sentences used in work, interviews, and messaging.",
       panelTitle: "Today’s mission",
       panelTitle2: "Weekly phrase",
       copyButton: "Copy phrase",
@@ -89,12 +102,11 @@ const fallbackData = {
       correctionLang: "Correction language",
       correctionRun: "Run correction",
       correctionReset: "Reset",
-      dataTitle: "Content Data",
-      dataDesc: "Manage quiz/tip data as JSON.",
-      dataQuiz: "Quiz JSON",
-      dataTips: "Tips JSON",
-      dataApply: "Apply",
-      dataCopy: "Copy",
+      whyKoreanTitle: "Why include learners of Korean?",
+      whyKoreanDesc: "Demand for Korean learning is growing, so we serve both English and Korean learners.",
+      whyKoreanPoint1: "K-content keeps driving steady growth of Korean learners.",
+      whyKoreanPoint2: "Korean has high correction needs for spacing, particles, and conjugation.",
+      whyKoreanPoint3: "A single flow for EN/KO increases reuse and return visits.",
       footerText: "MVP demo to validate quiz, tips, and correction flow.",
       placeholderSearch: "Search",
       placeholderCorrection: "Type your sentence"
@@ -161,13 +173,7 @@ const elements = {
   correctionInput: document.getElementById("correctionInput"),
   correctionRun: document.getElementById("correctionRun"),
   correctionReset: document.getElementById("correctionReset"),
-  correctionResult: document.getElementById("correctionResult"),
-  quizJson: document.getElementById("quizJson"),
-  tipsJson: document.getElementById("tipsJson"),
-  copyQuiz: document.getElementById("copyQuiz"),
-  copyTips: document.getElementById("copyTips"),
-  applyQuiz: document.getElementById("applyQuiz"),
-  applyTips: document.getElementById("applyTips")
+  correctionResult: document.getElementById("correctionResult")
 };
 
 async function loadJson(path, fallback) {
@@ -436,15 +442,6 @@ function runCorrection() {
   `;
 }
 
-function updateDataEditors() {
-  if (elements.quizJson) {
-    elements.quizJson.value = JSON.stringify(quizBank, null, 2);
-  }
-  if (elements.tipsJson) {
-    elements.tipsJson.value = JSON.stringify(tipsBank, null, 2);
-  }
-}
-
 function initEvents() {
   elements.langButtons.forEach((btn) => {
     btn.addEventListener("click", () => setLanguage(btn.dataset.lang));
@@ -489,41 +486,6 @@ function initEvents() {
     elements.correctionInput.value = "";
     elements.correctionResult.textContent = "";
   });
-
-  if (elements.copyQuiz) {
-    elements.copyQuiz.addEventListener("click", () => {
-      navigator.clipboard.writeText(elements.quizJson.value);
-    });
-  }
-
-  if (elements.copyTips) {
-    elements.copyTips.addEventListener("click", () => {
-      navigator.clipboard.writeText(elements.tipsJson.value);
-    });
-  }
-
-  if (elements.applyQuiz) {
-    elements.applyQuiz.addEventListener("click", () => {
-      try {
-        quizBank = JSON.parse(elements.quizJson.value);
-        buildQuiz();
-        renderQuiz();
-      } catch (error) {
-        alert("퀴즈 JSON 형식이 올바르지 않습니다.");
-      }
-    });
-  }
-
-  if (elements.applyTips) {
-    elements.applyTips.addEventListener("click", () => {
-      try {
-        tipsBank = JSON.parse(elements.tipsJson.value);
-        renderTips();
-      } catch (error) {
-        alert("팁 JSON 형식이 올바르지 않습니다.");
-      }
-    });
-  }
 }
 
 async function init() {
@@ -544,7 +506,6 @@ async function init() {
   buildQuiz();
   renderQuiz();
   renderTips();
-  updateDataEditors();
 
   const defaultLang = document.body.dataset.defaultLang || "ko";
   setLanguage(defaultLang);

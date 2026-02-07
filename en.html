@@ -34,7 +34,6 @@
         <a href="#quiz" data-i18n="navQuiz">Quiz</a>
         <a href="#tips" data-i18n="navTips">Tips</a>
         <a href="#correction" data-i18n="navCorrection">Correction</a>
-        <a href="#data" data-i18n="navData">Data</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="language">
         <button type="button" class="pill" data-lang="ko">KO</button>
@@ -59,6 +58,26 @@
           <div class="hero-actions">
             <a class="btn primary" href="#quiz" data-i18n="heroCta">Start a quiz</a>
             <a class="btn ghost" href="#tips" data-i18n="heroCtaAlt">View tips</a>
+          </div>
+          <div class="hero-priority">
+            <div class="hero-priority-header">
+              <h2>User-First Priorities</h2>
+              <p>Use it instantly, get short feedback, and try again without friction.</p>
+            </div>
+            <div class="hero-priority-grid">
+              <div class="hero-priority-card">
+                <h3>Instant start</h3>
+                <p>Run quizzes/corrections without login. Just pick a language.</p>
+              </div>
+              <div class="hero-priority-card">
+                <h3>Real‑world focus</h3>
+                <p>Improve sentences used in work, interviews, and messaging.</p>
+              </div>
+              <div class="hero-priority-card">
+                <h3>Short feedback</h3>
+                <p>Not just right/wrong—learn with a 1‑line rule + example.</p>
+              </div>
+            </div>
           </div>
           <div class="hero-stats">
             <div>
@@ -85,6 +104,20 @@
             <div class="phrase" id="weeklyPhrase"></div>
             <button class="btn small" id="copyPhrase" type="button" data-i18n="copyButton">Copy phrase</button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why-korean">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why include learners of Korean?</h2>
+          <p>Demand for Korean learning is growing, so we serve both English and Korean learners.</p>
+        </div>
+        <div class="why-list">
+          <div class="why-item">K‑content keeps driving steady growth of Korean learners.</div>
+          <div class="why-item">Korean has high correction needs for spacing, particles, and conjugation.</div>
+          <div class="why-item">A single flow for EN/KO increases reuse and return visits.</div>
         </div>
       </div>
     </section>
@@ -194,69 +227,67 @@
       </div>
     </section>
 
-    <section class="section" id="data">
-      <div class="container">
-        <div class="section-header">
-          <h2 data-i18n="dataTitle">Content Data</h2>
-          <p data-i18n="dataDesc">Manage quiz/tip data as JSON.</p>
-        </div>
-        <div class="data-grid">
-          <div class="data-card">
-            <div class="data-header">
-              <h3 data-i18n="dataQuiz">Quiz JSON</h3>
-              <div class="data-actions">
-                <button class="btn ghost small" id="copyQuiz" type="button" data-i18n="dataCopy">Copy</button>
-                <button class="btn primary small" id="applyQuiz" type="button" data-i18n="dataApply">Apply</button>
-              </div>
-            </div>
-            <textarea id="quizJson" rows="10"></textarea>
-          </div>
-          <div class="data-card">
-            <div class="data-header">
-              <h3 data-i18n="dataTips">Tips JSON</h3>
-              <div class="data-actions">
-                <button class="btn ghost small" id="copyTips" type="button" data-i18n="dataCopy">Copy</button>
-                <button class="btn primary small" id="applyTips" type="button" data-i18n="dataApply">Apply</button>
-              </div>
-            </div>
-            <textarea id="tipsJson" rows="10"></textarea>
-          </div>
-        </div>
-        <p class="data-hint">You can edit the JSON files directly or edit here and copy back.</p>
-      </div>
-    </section>
-
     <section class="section" id="positioning">
       <div class="container">
         <div class="section-header">
-          <h2>User-need Positioning</h2>
-          <p>“EN↔KO sentence correction + 60-second quiz + error pattern insights”</p>
+          <h2>10 Market Gaps We Target</h2>
+          <p>Unmet needs mapped to evidence and how the website reflects each opportunity.</p>
         </div>
         <div class="gap-grid">
-          <div class="gap-card">
-            <h3>Unmet needs</h3>
-            <ul>
-              <li>Interrupted learning due to ads/paywalls</li>
-              <li>No explanation for wrong answers</li>
-              <li>Korean spacing/particle correction pain</li>
-            </ul>
-          </div>
-          <div class="gap-card">
-            <h3>Attack position</h3>
-            <ul>
-              <li>Instant use without login</li>
-              <li>Correction + rule + example</li>
-              <li>Business/career sentence polish</li>
-            </ul>
-          </div>
-          <div class="gap-card">
-            <h3>Content/feature design</h3>
-            <ul>
-              <li>1-minute quiz + error notes</li>
-              <li>K-content line learning template</li>
-              <li>Personal error tags (later)</li>
-            </ul>
-          </div>
+          <article class="gap-card">
+            <h3>1) Uninterrupted free learning flow</h3>
+            <p class="gap-evidence">Repeated complaints about ads/hearts/energy stopping learning.</p>
+            <p class="gap-approach">“1‑minute quiz/1‑sentence correction” works without login + limit ads to 1–2 in‑content placements</p>
+          </article>
+          <article class="gap-card">
+            <h3>2) “Why it’s wrong” + recurrence prevention</h3>
+            <p class="gap-evidence">Apps are criticized for answer‑only, shallow feedback.</p>
+            <p class="gap-approach">Auto‑generate 1‑line rule + 2 examples + 1 mini‑quiz with each correction</p>
+          </article>
+          <article class="gap-card">
+            <h3>3) Personal error archive (my mistake notebook)</h3>
+            <p class="gap-evidence">Users want to track the mistakes they repeat.</p>
+            <p class="gap-approach">Save correction/quiz outcomes with error tags (particles/tense/word order) and use them in the next quiz</p>
+          </article>
+          <article class="gap-card">
+            <h3>4) Specialized in Korean spacing/particles</h3>
+            <p class="gap-evidence">Korean spacing/particles/conjugation are structurally hard with high correction demand.</p>
+            <p class="gap-approach">“Korean Writing Fix” tool + ultra‑short explanation of why the spacing is correct</p>
+          </article>
+          <article class="gap-card">
+            <h3>5) Concrete pronunciation prescriptions</h3>
+            <p class="gap-evidence">AI speaking apps are criticized for basic/lenient pronunciation feedback.</p>
+            <p class="gap-approach">Pronunciation diagnosis → mouth/tongue placement → minimal‑pair quiz set</p>
+          </article>
+          <article class="gap-card">
+            <h3>6) K‑drama/lyrics‑based learning tools</h3>
+            <p class="gap-evidence">Motivation is strong but tools are fragmented.</p>
+            <p class="gap-approach">Template: one line → expression explainer → 3 similar expressions → shadowing</p>
+          </article>
+          <article class="gap-card">
+            <h3>7) Work/career scenario English correction</h3>
+            <p class="gap-evidence">Business communication remains important even in the AI translation era.</p>
+            <p class="gap-approach">Templates for email/interview/meeting/messenger + tone/formality correction</p>
+          </article>
+          <article class="gap-card">
+            <h3>8) Multilingual UI + language pair expansion</h3>
+            <p class="gap-evidence">Multilingual access correlates with learner growth.</p>
+            <p class="gap-approach">Expand beyond EN↔KO to combinations like “learn Korean with a Spanish UI”</p>
+          </article>
+          <article class="gap-card">
+            <h3>9) Short, repeatable micro‑learning</h3>
+            <p class="gap-evidence">Short‑form mobile learning habits keep strengthening.</p>
+            <p class="gap-approach">“Today’s 60‑second quiz” + streaks implemented on web</p>
+          </article>
+          <article class="gap-card">
+            <h3>10) Ad‑monetized SEO tool pages</h3>
+            <p class="gap-evidence">Education/online learning is often cited as a monetizable niche.</p>
+            <p class="gap-approach">Combine blog + tool pages (quiz/correction/templates) to lift PV and dwell time</p>
+          </article>
+        </div>
+        <div class="positioning-note">
+          <strong>Implementation summary</strong>
+          <p>Keep instant‑use quiz/correction at the top, and expand themed tool pages for work, K‑content, and pronunciation below.</p>
         </div>
       </div>
     </section>
