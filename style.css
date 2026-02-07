@@ -413,13 +413,6 @@ textarea {
   color: var(--text);
 }
 
-.gap-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 16px;
-  margin: 20px 0 24px;
-}
-
 .hero-priority {
   margin-top: 20px;
   display: grid;
@@ -461,45 +454,15 @@ textarea {
   font-size: 0.9rem;
 }
 
-.gap-card {
-  background: var(--panel);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-  display: grid;
-  gap: 10px;
+.roadmap-note {
+  padding-top: 20px;
 }
 
-.gap-card h3 {
-  margin: 0;
-  font-size: 1rem;
-}
-
-.gap-evidence {
+.roadmap-line {
   margin: 0;
   color: var(--muted);
   font-size: 0.95rem;
-}
-
-.gap-approach {
-  margin: 0;
-  color: var(--text);
-  font-weight: 600;
-}
-
-.positioning-note {
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: var(--panel);
-  padding: 16px;
-  color: var(--muted);
-}
-
-.positioning-note strong {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--text);
+  text-align: center;
 }
 
 .flow-grid {
