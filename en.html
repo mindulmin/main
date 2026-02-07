@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="단어 퀴즈, 학습 팁, 언어 교정으로 구성된 다국어 언어학습 웹 MVP" />
+  <meta name="description" content="A multilingual language learning MVP with quizzes, tips, and correction." />
   <meta name="keywords" content="language learning, korean, english, quiz, grammar, correction" />
   <meta property="og:title" content="LinguaForge MVP" />
-  <meta property="og:description" content="퀴즈 · 팁 · 교정으로 구성된 언어학습 MVP" />
+  <meta property="og:description" content="Quiz · Tips · Correction language learning MVP" />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:locale" content="en_US" />
   <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="index.html" />
+  <link rel="canonical" href="en.html" />
   <link rel="alternate" hreflang="ko" href="ko.html" />
   <link rel="alternate" hreflang="en" href="en.html" />
   <link rel="alternate" hreflang="x-default" href="index.html" />
@@ -20,25 +20,25 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;600;700&family=Black+Han+Sans&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
-<body data-default-lang="ko">
+<body data-default-lang="en">
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
         <span class="brand-mark">LF</span>
         <div class="brand-text">
           <div class="brand-title">LinguaForge</div>
-          <div class="brand-subtitle" data-i18n="brandSubtitle">단어 퀴즈 · 학습 팁 · 교정</div>
+          <div class="brand-subtitle" data-i18n="brandSubtitle">Quiz · Tips · Correction</div>
         </div>
       </div>
       <nav class="site-nav">
-        <a href="#quiz" data-i18n="navQuiz">퀴즈</a>
-        <a href="#tips" data-i18n="navTips">학습 팁</a>
-        <a href="#correction" data-i18n="navCorrection">교정</a>
-        <a href="#data" data-i18n="navData">데이터</a>
+        <a href="#quiz" data-i18n="navQuiz">Quiz</a>
+        <a href="#tips" data-i18n="navTips">Tips</a>
+        <a href="#correction" data-i18n="navCorrection">Correction</a>
+        <a href="#data" data-i18n="navData">Data</a>
       </nav>
       <div class="lang-switch" role="group" aria-label="language">
-        <button type="button" class="pill is-active" data-lang="ko">KO</button>
-        <button type="button" class="pill" data-lang="en">EN</button>
+        <button type="button" class="pill" data-lang="ko">KO</button>
+        <button type="button" class="pill is-active" data-lang="en">EN</button>
       </div>
     </div>
   </header>
@@ -47,37 +47,37 @@
     <section class="hero">
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow" data-i18n="heroEyebrow">듀오링고 + 스픽 감성의 웹형 MVP</p>
-          <h1 data-i18n="heroTitle">하루 10분, 단어와 표현을 정확하게.</h1>
-          <p class="hero-desc" data-i18n="heroDesc">한국인 영어 학습자와 한국어 학습자를 동시에 겨냥한 퀴즈, 블로그, 교정 흐름을 한 화면에서 제공합니다.</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Web MVP inspired by Duolingo + Speak</p>
+          <h1 data-i18n="heroTitle">Ten minutes a day, sharpen words and expressions.</h1>
+          <p class="hero-desc" data-i18n="heroDesc">A single flow that serves Korean learners of English and global learners of Korean: quiz, tips, and correction.</p>
           <div class="hero-actions">
-            <a class="btn primary" href="#quiz" data-i18n="heroCta">지금 퀴즈 시작</a>
-            <a class="btn ghost" href="#tips" data-i18n="heroCtaAlt">학습 팁 보기</a>
+            <a class="btn primary" href="#quiz" data-i18n="heroCta">Start a quiz</a>
+            <a class="btn ghost" href="#tips" data-i18n="heroCtaAlt">View tips</a>
           </div>
           <div class="hero-stats">
             <div>
               <div class="stat-number">2</div>
-              <div class="stat-label" data-i18n="statLanguages">학습 언어</div>
+              <div class="stat-label" data-i18n="statLanguages">Languages</div>
             </div>
             <div>
               <div class="stat-number">3</div>
-              <div class="stat-label" data-i18n="statModules">핵심 모듈</div>
+              <div class="stat-label" data-i18n="statModules">Core modules</div>
             </div>
             <div>
               <div class="stat-number">MVP</div>
-              <div class="stat-label" data-i18n="statStage">현재 단계</div>
+              <div class="stat-label" data-i18n="statStage">Stage</div>
             </div>
           </div>
         </div>
         <div class="hero-panel">
           <div class="panel-card">
-            <h3 data-i18n="panelTitle">오늘의 미션</h3>
+            <h3 data-i18n="panelTitle">Today’s mission</h3>
             <ul class="panel-list" id="todayMission"></ul>
           </div>
           <div class="panel-card accent">
-            <h3 data-i18n="panelTitle2">이번주 인기 표현</h3>
+            <h3 data-i18n="panelTitle2">Weekly phrase</h3>
             <div class="phrase" id="weeklyPhrase"></div>
-            <button class="btn small" id="copyPhrase" type="button" data-i18n="copyButton">표현 복사</button>
+            <button class="btn small" id="copyPhrase" type="button" data-i18n="copyButton">Copy phrase</button>
           </div>
         </div>
       </div>
@@ -86,26 +86,26 @@
     <section class="section" id="quiz">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="quizTitle">단어 퀴즈</h2>
-          <p data-i18n="quizDesc">짧은 문항으로 어휘/표현 감을 빠르게 올립니다.</p>
+          <h2 data-i18n="quizTitle">Word Quiz</h2>
+          <p data-i18n="quizDesc">Quick questions to boost vocabulary and usage.</p>
         </div>
         <div class="quiz-controls">
           <div class="control">
-            <label for="quizLang" data-i18n="quizLang">학습 언어</label>
+            <label for="quizLang" data-i18n="quizLang">Learning language</label>
             <select id="quizLang">
               <option value="en">English</option>
               <option value="ko">Korean</option>
             </select>
           </div>
           <div class="control">
-            <label for="quizLevel" data-i18n="quizLevel">난이도</label>
+            <label for="quizLevel" data-i18n="quizLevel">Difficulty</label>
             <select id="quizLevel">
-              <option value="easy" data-i18n="levelEasy">쉬움</option>
-              <option value="mid" data-i18n="levelMid">보통</option>
-              <option value="hard" data-i18n="levelHard">어려움</option>
+              <option value="easy" data-i18n="levelEasy">Easy</option>
+              <option value="mid" data-i18n="levelMid">Medium</option>
+              <option value="hard" data-i18n="levelHard">Hard</option>
             </select>
           </div>
-          <button class="btn primary" id="quizStart" type="button" data-i18n="quizStart">새 퀴즈 생성</button>
+          <button class="btn primary" id="quizStart" type="button" data-i18n="quizStart">Generate quiz</button>
         </div>
         <form class="quiz-card" id="quizForm"></form>
         <div class="quiz-result" id="quizResult"></div>
@@ -115,20 +115,20 @@
     <section class="section" id="tips">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="tipsTitle">학습 팁 블로그</h2>
-          <p data-i18n="tipsDesc">검색 유입을 고려한 롱테일 콘텐츠 포맷.</p>
+          <h2 data-i18n="tipsTitle">Learning Tips</h2>
+          <p data-i18n="tipsDesc">Long-tail blog formats for SEO traction.</p>
         </div>
         <div class="tips-controls">
-          <input type="search" id="tipsSearch" placeholder="검색" aria-label="search" />
+          <input type="search" id="tipsSearch" placeholder="Search" aria-label="search" />
           <select id="tipsLang">
-            <option value="all" data-i18n="tipsAll">전체</option>
+            <option value="all" data-i18n="tipsAll">All</option>
             <option value="ko">한국어</option>
             <option value="en">English</option>
           </select>
         </div>
         <div class="tips-grid" id="tipsGrid"></div>
         <article class="tips-detail" id="tipsDetail" hidden>
-          <button type="button" class="btn ghost" id="tipsBack" data-i18n="tipsBack">목록으로</button>
+          <button type="button" class="btn ghost" id="tipsBack" data-i18n="tipsBack">Back to list</button>
           <h3 id="tipsDetailTitle"></h3>
           <div class="tips-meta" id="tipsDetailMeta"></div>
           <p id="tipsDetailBody"></p>
@@ -139,21 +139,21 @@
     <section class="section" id="correction">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="correctionTitle">언어 교정</h2>
-          <p data-i18n="correctionDesc">MVP 버전의 규칙 기반 교정입니다. 향후 AI 교정으로 확장 가능합니다.</p>
+          <h2 data-i18n="correctionTitle">Language Correction</h2>
+          <p data-i18n="correctionDesc">Rule-based MVP correction. Upgrade to AI later.</p>
         </div>
         <div class="correction-card">
           <div class="control">
-            <label for="correctionLang" data-i18n="correctionLang">교정 언어</label>
+            <label for="correctionLang" data-i18n="correctionLang">Correction language</label>
             <select id="correctionLang">
               <option value="en">English</option>
               <option value="ko">한국어</option>
             </select>
           </div>
-          <textarea id="correctionInput" rows="6" placeholder="문장을 입력하세요"></textarea>
+          <textarea id="correctionInput" rows="6" placeholder="Type your sentence"></textarea>
           <div class="correction-actions">
-            <button class="btn primary" id="correctionRun" type="button" data-i18n="correctionRun">교정 실행</button>
-            <button class="btn ghost" id="correctionReset" type="button" data-i18n="correctionReset">초기화</button>
+            <button class="btn primary" id="correctionRun" type="button" data-i18n="correctionRun">Run correction</button>
+            <button class="btn ghost" id="correctionReset" type="button" data-i18n="correctionReset">Reset</button>
           </div>
           <div class="correction-result" id="correctionResult"></div>
         </div>
@@ -163,39 +163,39 @@
     <section class="section" id="data">
       <div class="container">
         <div class="section-header">
-          <h2 data-i18n="dataTitle">콘텐츠 데이터</h2>
-          <p data-i18n="dataDesc">JSON 기반으로 퀴즈/팁 데이터를 관리합니다.</p>
+          <h2 data-i18n="dataTitle">Content Data</h2>
+          <p data-i18n="dataDesc">Manage quiz/tip data as JSON.</p>
         </div>
         <div class="data-grid">
           <div class="data-card">
             <div class="data-header">
-              <h3 data-i18n="dataQuiz">퀴즈 JSON</h3>
+              <h3 data-i18n="dataQuiz">Quiz JSON</h3>
               <div class="data-actions">
-                <button class="btn ghost small" id="copyQuiz" type="button" data-i18n="dataCopy">복사</button>
-                <button class="btn primary small" id="applyQuiz" type="button" data-i18n="dataApply">적용</button>
+                <button class="btn ghost small" id="copyQuiz" type="button" data-i18n="dataCopy">Copy</button>
+                <button class="btn primary small" id="applyQuiz" type="button" data-i18n="dataApply">Apply</button>
               </div>
             </div>
             <textarea id="quizJson" rows="10"></textarea>
           </div>
           <div class="data-card">
             <div class="data-header">
-              <h3 data-i18n="dataTips">팁 JSON</h3>
+              <h3 data-i18n="dataTips">Tips JSON</h3>
               <div class="data-actions">
-                <button class="btn ghost small" id="copyTips" type="button" data-i18n="dataCopy">복사</button>
-                <button class="btn primary small" id="applyTips" type="button" data-i18n="dataApply">적용</button>
+                <button class="btn ghost small" id="copyTips" type="button" data-i18n="dataCopy">Copy</button>
+                <button class="btn primary small" id="applyTips" type="button" data-i18n="dataApply">Apply</button>
               </div>
             </div>
             <textarea id="tipsJson" rows="10"></textarea>
           </div>
         </div>
-        <p class="data-hint">로컬에서 JSON 파일을 편집해도 되고, 여기에서 수정 후 복사해 파일에 붙여넣어도 됩니다.</p>
+        <p class="data-hint">You can edit the JSON files directly or edit here and copy back.</p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="container footer-inner">
-      <p data-i18n="footerText">MVP 데모: 퀴즈 · 팁 · 교정 흐름을 한 번에 검증합니다.</p>
+      <p data-i18n="footerText">MVP demo to validate quiz, tips, and correction flow.</p>
       <div class="footer-tags">
         <span>#SEO</span>
         <span>#AdSense</span>

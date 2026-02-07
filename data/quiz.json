@@ -1,0 +1,110 @@
+[
+  {
+    "id": "en-1",
+    "lang": "en",
+    "level": "easy",
+    "question": "Choose the best meaning of 'beneath'.",
+    "choices": ["below", "before", "between", "behind"],
+    "answer": 0,
+    "explanation": {
+      "ko": "beneath = 아래에",
+      "en": "beneath means below"
+    }
+  },
+  {
+    "id": "en-2",
+    "lang": "en",
+    "level": "easy",
+    "question": "Pick the correct sentence.",
+    "choices": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."],
+    "answer": 1,
+    "explanation": {
+      "ko": "3인칭 단수는 goes",
+      "en": "third-person singular takes goes"
+    }
+  },
+  {
+    "id": "en-3",
+    "lang": "en",
+    "level": "mid",
+    "question": "Which is a natural business email opener?",
+    "choices": ["Yo, what’s up?", "Hope this email finds you well.", "Give me the file.", "Look, I want."],
+    "answer": 1,
+    "explanation": {
+      "ko": "공식 이메일에 자주 쓰는 문구",
+      "en": "common formal email opening"
+    }
+  },
+  {
+    "id": "en-4",
+    "lang": "en",
+    "level": "hard",
+    "question": "Choose the closest meaning of 'mitigate'.",
+    "choices": ["to worsen", "to lessen", "to ignore", "to delay"],
+    "answer": 1,
+    "explanation": {
+      "ko": "mitigate = 완화하다",
+      "en": "mitigate means lessen"
+    }
+  },
+  {
+    "id": "en-5",
+    "lang": "en",
+    "level": "mid",
+    "question": "Which sentence uses 'a' correctly?",
+    "choices": ["She bought a umbrella.", "She bought an umbrella.", "She bought umbrella.", "She bought the umbrella a."],
+    "answer": 1,
+    "explanation": {
+      "ko": "모음 앞엔 an",
+      "en": "use an before vowel sounds"
+    }
+  },
+  {
+    "id": "ko-1",
+    "lang": "ko",
+    "level": "easy",
+    "question": "'감사합니다'의 적절한 영어 표현은?",
+    "choices": ["Thanks you", "Thank you", "Thanking you", "Thanked you"],
+    "answer": 1,
+    "explanation": {
+      "ko": "Thank you가 기본 표현",
+      "en": "Thank you is the standard form"
+    }
+  },
+  {
+    "id": "ko-2",
+    "lang": "ko",
+    "level": "easy",
+    "question": "'맛있어요'에 가장 가까운 표현은?",
+    "choices": ["It is delicious", "It is hot", "It is quick", "It is heavy"],
+    "answer": 0,
+    "explanation": {
+      "ko": "delicious = 맛있는",
+      "en": "delicious means tasty"
+    }
+  },
+  {
+    "id": "ko-3",
+    "lang": "ko",
+    "level": "mid",
+    "question": "'괜찮아요'의 상황별 의미로 적절한 것은?",
+    "choices": ["I agree", "No worries / It’s okay", "I hate it", "I’m leaving"],
+    "answer": 1,
+    "explanation": {
+      "ko": "거절, 위로, 허락 등 다양하게 사용",
+      "en": "used for reassurance or refusal"
+    }
+  },
+  {
+    "id": "ko-4",
+    "lang": "ko",
+    "level": "hard",
+    "question": "'길을 잃었어요'에 가장 가까운 표현은?",
+    "choices": ["I lost a road", "I got lost", "I am lose", "I missing road"],
+    "answer": 1,
+    "explanation": {
+      "ko": "I got lost 가 자연스러움",
+      "en": "I got lost is natural"
+    }
+  }
+]
