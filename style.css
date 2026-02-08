@@ -110,7 +110,7 @@ body {
 }
 
 .hero {
-  padding: 64px 0 40px;
+  padding: 64px 0 72px;
 }
 
 .hero-grid {
@@ -231,6 +231,10 @@ h1 {
 
 .section {
   padding: 60px 0;
+}
+
+#why-korean {
+  padding-top: 84px;
 }
 
 .disclosure {
